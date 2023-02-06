@@ -53,3 +53,4 @@ dependencies {
     compileOnly("com.android.installreferrer:installreferrer:2.2")
 
 }
+apply from: 'maven-push.gradle'

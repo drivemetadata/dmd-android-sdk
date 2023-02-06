@@ -27,6 +27,7 @@ def getRepositoryUsername() {
 def getRepositoryPassword() {
     return hasProperty('NEXUS_PASSWORD') ? NEXUS_PASSWORD : ""
 }
+
 afterEvaluate {
     publishing {
         repositories {
@@ -77,5 +78,8 @@ afterEvaluate {
         }
     }
 
-
+    signing {
+        required { true }
+        sign publishing.publications.release
+    }
 }
