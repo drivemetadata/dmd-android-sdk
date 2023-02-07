@@ -10,7 +10,6 @@ import com.drivemetadata.network.HttpClient;
 import com.drivemetadata.sharepreference.PreferenceUtil;
 import com.drivemetadata.utils.DriveMetaDataLogger;
 import com.drivemetadata.utils.Utils;
-import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
 public class DriveMetaData {
@@ -126,7 +125,7 @@ public class DriveMetaData {
          *
          *
          */
-        public Builder(@NotNull Context context, @NotNull  int mClientId, @NotNull String mToken, @NotNull int mAppId) {
+        public Builder( Context context,   int mClientId,  String mToken,  int mAppId) {
             this.application = (Application) context.getApplicationContext();
             this.clientId = mClientId;
             this.token = mToken;

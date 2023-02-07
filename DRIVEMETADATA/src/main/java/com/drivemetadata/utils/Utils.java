@@ -37,7 +37,6 @@ import com.google.android.gms.ads.identifier.AdvertisingIdClient;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 
-import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -496,7 +495,7 @@ public class Utils {
      * @param str the string to be examined
      * @return true if the string is empty (once trimmed) or 0-length
      */
-    public static boolean isEmptyOrBlank(@NotNull CharSequence str) {
+    public static boolean isEmptyOrBlank( CharSequence str) {
         return str.length() == 0 || getTrimmedLength(str) == 0;
     }
 

@@ -1,7 +1,4 @@
-plugins {
-    id 'com.android.library'
-}
-
+apply plugin: 'com.android.library'
 android {
     compileSdk 33
 
@@ -39,8 +36,8 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.9.2'
     testImplementation 'junit:junit:4.13.2'
@@ -53,4 +50,4 @@ dependencies {
     compileOnly("com.android.installreferrer:installreferrer:2.2")
 
 }
-apply from: 'maven-push.gradle'
+//apply from: 'maven-push.gradle'
