@@ -14,20 +14,20 @@ class Global {
     static def POM_SCM_DEV_CONNECTION = 'scm:git:https://github.com/drivemetadata/dmd-android-sdk'
     static  def POM_LICENCE_NAME = 'MIT License'
     static def POM_LICENCE_URL = 'https://raw.githubusercontent.com/drivemetadata/dmd-android-sdk/master/LICENSE'
-    static def POM_LICENCE_DIST = 'android-sdk'
+    static def POM_LICENCE_DIST = 'dmd-android-sdk'
     static def POM_DEVELOPER_ID = 'drivemetadata'
     static def POM_DEVELOPER_NAME = 'Amit Kumar Gupta'
-    static def SNAPSHOT_REPOSITORY_URL = 'https://oss.sonatype.org/content/repositories/snapshots'
-    static  def RELEASE_REPOSITORY_URL = 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
+    static def SNAPSHOT_REPOSITORY_URL = 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
+    static  def RELEASE_REPOSITORY_URL = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
 }
 def getReleaseRepositoryUrl() {
     return hasProperty('RELEASE_REPOSITORY_URL') ? RELEASE_REPOSITORY_URL
-            : "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+            : "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
 }
 
 def getSnapshotRepositoryUrl() {
     return hasProperty('SNAPSHOT_REPOSITORY_URL') ? SNAPSHOT_REPOSITORY_URL
-            : "https://oss.sonatype.org/content/repositories/snapshots/"
+            : "https://s01.oss.sonatype.org/content/repositories/snapshots/"
 }
 def getRepositoryUsername() {
     return hasProperty('NEXUS_USERNAME') ? NEXUS_USERNAME : ""

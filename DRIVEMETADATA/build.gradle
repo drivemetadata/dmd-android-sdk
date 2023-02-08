@@ -12,20 +12,8 @@ android {
     }
 
     buildTypes {
-
-        debug {
-            buildConfigField("int", "VERSION_CODE", "${defaultConfig.versionCode}")
-            buildConfigField("String","VERSION_NAME","\"${defaultConfig.versionName}\"")
-            minifyEnabled true
-            debuggable true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-
         release {
-            buildConfigField("int", "VERSION_CODE", "${defaultConfig.versionCode}")
-            buildConfigField("String","VERSION_NAME","\"${defaultConfig.versionName}\"")
-            minifyEnabled true
-            debuggable false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -50,4 +38,4 @@ dependencies {
     compileOnly("com.android.installreferrer:installreferrer:2.2")
 
 }
-//apply from: 'maven-push.gradle'
+apply from: 'maven-push.gradle'
