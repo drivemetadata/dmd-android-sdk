@@ -17,17 +17,17 @@ class Global {
     static def POM_LICENCE_DIST = 'dmd-android-sdk'
     static def POM_DEVELOPER_ID = 'drivemetadata'
     static def POM_DEVELOPER_NAME = 'Amit Kumar Gupta'
-    static def SNAPSHOT_REPOSITORY_URL = 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
-    static  def RELEASE_REPOSITORY_URL = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
+    static def SNAPSHOT_REPOSITORY_URL = 'https://oss.sonatype.org/content/repositories/snapshots/'
+    static  def RELEASE_REPOSITORY_URL = 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
 }
 def getReleaseRepositoryUrl() {
     return hasProperty('RELEASE_REPOSITORY_URL') ? RELEASE_REPOSITORY_URL
-            : "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            : "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
 }
 
 def getSnapshotRepositoryUrl() {
     return hasProperty('SNAPSHOT_REPOSITORY_URL') ? SNAPSHOT_REPOSITORY_URL
-            : "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+            : "https://oss.sonatype.org/content/repositories/snapshots/"
 }
 def getRepositoryUsername() {
     return hasProperty('NEXUS_USERNAME') ? NEXUS_USERNAME : ""
@@ -36,7 +36,9 @@ def getRepositoryUsername() {
 def getRepositoryPassword() {
     return hasProperty('NEXUS_PASSWORD') ? NEXUS_PASSWORD : ""
 }
-
+def isReleaseBuild() {
+    return hasProperty("MAVEN_RELEASE_BUILD") && MAVEN_RELEASE_BUILD == "true";
+}
 afterEvaluate { project ->
     uploadArchives {
         repositories {
