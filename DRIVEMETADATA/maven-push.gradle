@@ -5,7 +5,7 @@ class Global {
     static def POM_NAME = 'dmd-android-sdk'
     static def POM_ARTIFACT_ID = 'dmd-android-sdk'
     static def POM_PACKAGING = 'aar'
-    static def VERSION_NAME = '1.0.1'
+    static def VERSION_NAME = '1.0.2'
     static def GROUP_ID = 'com.drivemetadata'
     static def POM_DESCRIPTION = 'Analytics Servcies'
     static def POM_URL = 'https://github.com/drivemetadata/dmd-android-sdk'

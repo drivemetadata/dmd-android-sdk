@@ -4,7 +4,6 @@ import static com.drivemetadata.enums.LogLevel.DEBUG;
 import static com.drivemetadata.enums.LogLevel.INFO;
 import static com.drivemetadata.enums.LogLevel.VERBOSE;
 import android.util.Log;
-import com.drivemetadata.BuildConfig;
 import com.drivemetadata.enums.LogLevel;
 
 public final class DriveMetaDataLogger {
@@ -45,9 +44,9 @@ public final class DriveMetaDataLogger {
 
     private boolean shouldLog(LogLevel level) {
 
-        if(BuildConfig.BUILD_TYPE.equals("debug")){
-           return true;
-        }
+//        if(BuildConfig.BUILD_TYPE.equals("debug")){
+//           return true;
+//        }
         return false;
     }
 }
