@@ -73,7 +73,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Utils {
     public static String CLICK_ID = "";
     public static String INSTALL_REFERRER = "";
-    public static String SDK_VERSION = "1.0.2";
+    public static String SDK_VERSION = "1.0.3";
     public static long INSTALL_APP_REFER_INSTALL_TIME;
     public static long INSTALL_APP_REFER_CLICK_TIME;
     public static  String utm_campaign ="";
